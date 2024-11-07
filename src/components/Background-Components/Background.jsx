@@ -13,29 +13,29 @@ const Background = ({playStatus, heroCount}) => {
   
   if(playStatus){
     return(
-      <video className="background" autoPlay loop muted> <source src={video} type='video/mp4'/></video>
+      <video className="background fade-in" autoPlay loop > <source src={video} type='video/mp4'/></video>
     )
   }
   else if (heroCount === 0){
-    return <img src={image1} className="background" alt=""/>
+    return <img src={image1} className="background fade-in" alt=""/>
   }
   else if (heroCount === 1){
-    return <img src={image2} className="background" alt=""/>
+    return <img src={image2} className="background fade-in" alt=""/>
   }
   else if (heroCount === 2){
-    return <img src={image3} className="background" alt=""/>
+    return <img src={image3} className="background fade-in" alt=""/>
   }
   else if (heroCount === 3){
-    return <img src={image4} className="background" alt=""/>
+    return <img src={image4} className="background fade-in" alt=""/>
   }
   else if (heroCount === 4){
-    return <img src={image5} className="background" alt=""/>
+    return <img src={image5} className="background fade-in" alt=""/>
   }
   else if (heroCount === 5){
-    return <img src={image6} className="background" alt=""/>
+    return <img src={image6} className="background fade-in" alt=""/>
   }
   else if (heroCount === 6){
-    return <img src={image7} className="background" alt=""/>
+    return <img src={image7} className="background fade-in" alt=""/>
   }
 
 

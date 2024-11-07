@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navbar } from './components/Navbar- Components/Navbar'
 import { Footer } from './components/Footer-Components/Footer'
 import  Background  from './components/Background-Components/Background'
@@ -15,10 +15,14 @@ const App = () => {
     {text1: "Defy", text2: "Your Limits"},
     {text1: "Master", text2: "Your Destiny"},
   ]
-  const[heroCount, setHeroCount] = useState(4);
+  const[heroCount, setHeroCount] = useState(0);
   const[playStatus, setPlayStatus] = useState(false);
 
-
+  useEffect(()=>{
+    setInterval(()=> {
+      setHeroCount((count)=>{return count===2?0:count+1})
+    }, 3000);
+  },[])
 
   return (
     <div>
